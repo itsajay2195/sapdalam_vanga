@@ -13,7 +13,8 @@ export default () => {
             const response = await yelp.get('/restaurants', {
                 params: {
                     country: 'US',
-                    name: term
+                    name: term,
+                    per_page:100
                 }
             });
 

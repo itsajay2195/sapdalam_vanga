@@ -2,6 +2,8 @@ import React from 'react';
 import {View,Text,TextInput,StyleSheet} from  'react-native';
 import {Feather} from '@expo/vector-icons';
 
+
+
 const SearchBar =({searchTerm,onChangeTerm,onSubmit}) =>{
     return(
         <View style={styles.backgroundStyle}>
