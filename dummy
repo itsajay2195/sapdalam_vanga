@@ -1,0 +1,9 @@
+setting up expo
+
+1. npm install -g expo-cli
+
+2. expo init food
+
+3. cd food
+
+4. npm start or npm expo start
