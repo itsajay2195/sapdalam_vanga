@@ -31,10 +31,10 @@ const SearchScreen = () => {
             <Text>We found {results.length} results</Text>
             <ScrollView>
             <ResultsList filter={filterByPrice(2)} title='Cost Effective'/>
-            <ResultsList filter={filterByPrice(3)} title='Bit Pricier'/>
-            <ResultsList filter={filterByPrice(4)} title='Expensive'/>
+            <ResultsList filter={filterByPrice(3)} title='Bit Pricier' />
+            <ResultsList filter={filterByPrice(4)} title='Expensive' />
             {/* <ResultsList filter={filterByPrice(2)} title='Expensive'/> */}
-            <ResultsList filter={filterByPrice(5)} title='Expensive'/>
+            <ResultsList filter={filterByPrice(5)} title='Expensive' />
             </ScrollView>
 
         </View>
