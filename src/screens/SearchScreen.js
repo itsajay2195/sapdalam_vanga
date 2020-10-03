@@ -28,6 +28,7 @@ const SearchScreen = () => {
             <SearchBar term={searchTerm} onChangeTerm={(newTerm) => setTerm(newTerm)} onSubmit={() => searchApi(searchTerm)}></SearchBar>
             {results == '' ? <Feather name='loader' style={styles.iconStyling}/>:null}
             {errorMsg ? <Text>{errorMsg}</Text> : null}
+    <Text> The search text is {searchTerm}</Text>
             <Text>We found {results.length} results</Text>
             <ScrollView>
             <ResultsList filter={filterByPrice(2)} title='Cost Effective'/>
