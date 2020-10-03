@@ -5,9 +5,13 @@ import { withNavigation } from 'react-navigation';
 
 // withNavigation helps the component to directly access the navigate 
 const ResultsList = ({ title,filter,navigation }) => {
+    if(!filter.length){
+        return null;
+    }
     return (
         
         <View >
+            
             <Text style={resultStyle.title}>{title}</Text>
             <Text>the length is {filter.length}</Text>
             <FlatList    
@@ -17,7 +21,7 @@ const ResultsList = ({ title,filter,navigation }) => {
              keyExtractor={filter.name}
              renderItem={({item}) =>{
                  return (
-                    <TouchableOpacity onPress={()=>navigation.navigate('ResultDetail')}>
+                    <TouchableOpacity onPress={()=>navigation.navigate('ResultDetail',{id:item.id})}>
                     <ResultDetails results={item}/> 
                     </TouchableOpacity> )
                     
@@ -25,9 +29,10 @@ const ResultsList = ({ title,filter,navigation }) => {
              
             />
         </View>
-    )
+        
+    )}
     
-}
+
 export default withNavigation(ResultsList);
 const resultStyle = StyleSheet.create({
 
